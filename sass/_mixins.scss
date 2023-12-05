@@ -1,0 +1,407 @@
+$text-color: #fff;
+$texter-color: #AFB1B8;
+$mud-color: #F5F4FA;
+$muder-color: #212121;
+$color-color: #2196F3;
+$colour-color: #757575;
+$hew-color: #2F303A;
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin centers($flex, $center){
+    display: $flex;
+    justify-content: $center;
+}
+@mixin prosto($aligh, $family, $size, $style, $weight, $line-height, $letter-spacing){
+    text-align: $aligh;
+    font-family: $family;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+body{
+    background: white;
+    margin:0;
+}
+.conteiner{
+    width: 1200px;
+    padding: 0px 15px 0px 15px;
+    margin: 0 auto;
+}
+   
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+/*Header*/
+.header-console {
+    height: 80px;
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+   
+.header-console__content-box {
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+    gap: 318px;
+    margin: 0;
+    padding: 0;
+}
+.header-console__section {
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+    gap: 93px;
+}
+.header-console__logo {
+    @include size($width: 145px, $height: 31px);
+    flex-shrink: 0;
+}
+.header-console__navigation {
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+}
+.header-console__menu {
+    @include centers($flex: flex, $center: center);
+    gap: 50px;
+}
+.header-console__option {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 500, $line-height: normal, 
+    $letter-spacing: 0.28px);
+}
+.header-console__option:nth-child(1) .header-console__option-link:visited {
+    color: $color-color;
+}
+.header-console__option-link:hover {
+    color: $color-color;
+    // color: red;
+}
+.header-console__information {
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+    gap: 50px;
+}
+.header-console__info {
+    color: $colour-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 500, $line-height: normal, 
+    $letter-spacing: 0.28px);
+    @include centers($flex: flex, $center: center);
+    gap: 10px;
+}
+.header-console__info:hover {
+    color: $color-color;
+}
+/*Main*/
+.services {
+    height: 600px;
+    margin: 0;
+    background-image: url("../image/img/section1/background_one.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+}
+.services__content-box {
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.services__title {
+    width: 696px;
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 44px, $style: normal, 
+    $weight: 900, $line-height: 60px, 
+    $letter-spacing: 2.64px);
+    text-transform: uppercase;
+}
+.services__button {
+    @include size($width: 216px, $height: 50px);
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: $color-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0.96px);
+}
+.services__button:hover {
+    box-shadow: 0px 0px 20px 13px $text-color;
+}
+/* Main box 1 */
+.achievement {
+    margin: 0;
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+    padding: 94px 0px 94px 0px;
+}
+.achievement__content-box {
+    @include centers($flex: flex, $center: space-between);
+    gap: 30px;
+}
+.achievement__element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.achievement__element::before {
+    content: "";
+    @include size($width: 270px, $height: 120px);
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: $mud-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:70px 70px;
+    margin-bottom: 30px;
+}
+.achievement__element:nth-child(1)::before {
+    background-image: url("../image/img/section2/antenna1.png");
+}
+.achievement__element:nth-child(2)::before {
+    background-image: url("../image/img/section2/clock1.png");
+}
+.achievement__element:nth-child(3)::before {
+    background-image: url("../image/img/section2/diagram1.png");
+}
+.achievement__element:nth-child(4)::before {
+    background-image: url("../image/img/section2/astronaut1.png");
+}
+.achievement__element-title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0.42px);
+    text-transform: uppercase;
+}
+.achievement__element-paragraf {
+    color: $colour-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 500, $line-height: 24px, 
+    $letter-spacing: 0.42px);
+}
+/* Main box 2 */
+.work {
+    margin: 0;
+    padding-bottom: 94px;
+    @include centers($flex: flex, $center: center);
+    align-items: start;
+}
+.work__content-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.work__title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 36px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 1.08px);
+}
+.work__image-box {
+    @include centers($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 30px;
+}
+.work__image {
+    @include size($width: 370px, $height: 294px);
+    flex-shrink: 0;
+}
+/* Main box 3 */
+.team {
+    height: 708px;
+    margin: 0;
+    background: $mud-color;
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+}
+.team__content-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.team__title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 36px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 1.08px);
+}
+.team__info-box {
+    @include centers($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 30px;
+}
+.team__info-element {
+    box-sizing: content-box;
+    width: 270px;
+    flex-shrink: 0;
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
+    background: $text-color;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.team__image {
+    @include size($width: 270px, $height: 260px);
+    flex-shrink: 0;
+}
+.team__info-container {
+    @include centers($flex: flex, $center: space-between);
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.team__text-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.team__name {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 500, $line-height: normal, 
+    $letter-spacing: 0.48px);
+}
+.team__paragraf {
+    color: $colour-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 16px, $style: normal, 
+    $weight: 400, $line-height: normal, 
+    $letter-spacing: 0.48px);
+}
+.team__social-networks-box {
+    @include centers($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 10px;
+}
+/* Company */
+.user {
+    height: 372px;
+    margin: 0;
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+}
+.user__content-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.user__title {
+    color: $muder-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 36px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 1.08px);
+}
+.user__company-box {
+    @include centers($flex: flex, $center: space-between);
+    align-items: center;
+    gap: 30px;
+}
+/* END Company */
+/* Footer box   */
+.footer-info {
+    height: 252px;
+    margin: 0;
+    background: $hew-color;
+    @include centers($flex: flex, $center: center);
+    align-items: center;
+}
+.footer-info__content-box {
+    @include centers($flex: flex, $center: start);
+    align-items: center;
+    gap: 70px;
+}
+.footer-info__info-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.footer-info__logo {
+    @include size($width: 145px, $height: 31px);
+}
+.footer-info__adress-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 9px;
+}
+.footer-info__adress {
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 400, $line-height: 24px, 
+    $letter-spacing: 0.42px);
+}
+.footer-info__contact {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 9px;
+}
+.footer-info__link-contact {
+    color: rgba(255, 255, 255, 0.60);
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 400, $line-height: 24px, 
+    $letter-spacing: 0.42px);
+}
+.footer-info__link-contact:hover {
+    color: $color-color;
+}
+.footer-info__subscribe-box {
+    @include centers($flex: flex, $center: center);
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.footer-info__title-subscribe {
+    color: $text-color;
+    @include prosto($aligh: center, $family: Roboto, 
+    $size: 14px, $style: normal, 
+    $weight: 700, $line-height: normal, 
+    $letter-spacing: 0.42px);
+    text-transform: uppercase;
+}
+.footer-info__social-networks-box {
+    @include centers($flex: flex, $center: start);
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 1200px){
+    .header-console__option-link{
+        color: green;
+    }
+}

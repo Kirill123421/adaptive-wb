@@ -1,0 +1,27 @@
+@import "placeholders";
+@import "mixins";
+@media screen and (max-width: 768px) {
+
+  .header-console__content-box {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .header-console__section {
+      gap: 15px;
+  }
+
+
+  
+  .services__title {
+      width: 100%;
+      text-align: center;
+  }
+
+  .services__button {
+      width: 100%;
+  }
+
+
+}
+   
